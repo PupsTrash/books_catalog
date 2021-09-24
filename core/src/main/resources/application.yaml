@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DATABASE_TO_UPPER=false
+    username: sa
+    password: password
+    flyway:
+      locations: classpath:db/migration
+      schemas: PUBLIC
+
+
+#springdoc:
+#  swagger-ui:
+#    configUrl: /v3/api-docs/swagger-config
+#    url: /v3/api-docs
