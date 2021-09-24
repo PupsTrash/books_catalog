@@ -1,11 +1,12 @@
 package com.example.service.book;
 
+import com.example.book.BookResponse;
 import com.example.db.BookEntity;
 
 public interface BookControllerService {
 
 
-    BookEntity getBook(Long id);
+    BookResponse getBook(Long id);
 
     BookEntity addBook(String title, String author, String codeISBN, Short yearPublishing);
 

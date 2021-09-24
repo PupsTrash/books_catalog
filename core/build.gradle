@@ -1,6 +1,7 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation project(":api")
     //Actuator
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
@@ -9,6 +10,8 @@ dependencies {
     runtimeOnly 'com.h2database:h2:1.4.200'
     implementation 'org.flywaydb:flyway-core'
 
+
+    implementation("org.springdoc:springdoc-openapi-ui:1.5.5")
 
 
 }

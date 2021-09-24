@@ -4,10 +4,31 @@ create table PUBLIC.book
 (
     id    int8 default nextval('PUBLIC.book_seq') not null,
     title varchar (255),
-    author varchar (255),
-    ISBN_code varchar (50),
-    year_publishing int,
+    isbn varchar (50),
+    year int,
     created_at timestamp with time zone default current_timestamp,
 
     primary key (id)
-)
+);
+
+CREATE SEQUENCE author_seq INCREMENT 1 START 1;
+
+create table PUBLIC.author
+(
+    id    int8 default nextval('PUBLIC.author_seq') not null,
+    first_name varchar (255),
+    second_name varchar (255),
+
+    primary key (id)
+);
+
+
+CREATE SEQUENCE book_author_seq INCREMENT 1 START 1;
+create table PUBLIC.book_author
+(
+    id    int8 default nextval('PUBLIC.book_author_seq') not null,
+    book_id int8 constraint book_author_book_id_fk references PUBLIC.book,
+    author_id int8 constraint book_author_author_id_fk references PUBLIC.author,
+
+    primary key (id)
+);

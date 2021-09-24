@@ -1,13 +1,18 @@
 package com.example.db;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
+@Table(name = "book")
 @Getter
 @Setter
+@NoArgsConstructor
 public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOOK_GEN")
@@ -15,8 +20,17 @@ public class BookEntity {
     private Long id;
 
     private String title;
-    private String author;
-    private String codeISBN;
-    private Short yearPublishing;
+    private String isbn;
+    private Short year;
+
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "book_author",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id")
+    )
+    private Set<AuthorEntity> authors = new HashSet<>();
+
 
 }
