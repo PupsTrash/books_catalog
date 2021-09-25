@@ -15,6 +15,13 @@ public class AuthorEntity {
     @SequenceGenerator(name = "AUTHOR_GEN", sequenceName = "author_seq", allocationSize = 1)
     private Long id;
 
-    private String first_name;
-    private String second_name;
+    private String first_and_second_name;
+
+    public AuthorEntity(String first_and_second_name) {
+        this.first_and_second_name = first_and_second_name;
+    }
+
+    public AuthorEntity() {
+
+    }
 }

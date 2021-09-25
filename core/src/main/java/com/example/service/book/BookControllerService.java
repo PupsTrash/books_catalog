@@ -6,11 +6,11 @@ import com.example.db.BookEntity;
 public interface BookControllerService {
 
 
-    BookResponse getBook(Long id);
+    BookEntity getBook(Long id);
 
-    BookEntity addBook(String title, String author, String codeISBN, Short yearPublishing);
+    BookEntity addBook(BookEntity book);
 
-    BookEntity editBook(String title, String author, String codeISBN, Short yearPublishing, Long id);
+    BookEntity editBook(BookEntity book);
 
     void deleteBook(Long id);
 

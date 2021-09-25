@@ -16,8 +16,7 @@ CREATE SEQUENCE author_seq INCREMENT 1 START 1;
 create table PUBLIC.author
 (
     id    int8 default nextval('PUBLIC.author_seq') not null,
-    first_name varchar (255),
-    second_name varchar (255),
+    first_and_second_name varchar (255) unique,
 
     primary key (id)
 );
