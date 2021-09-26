@@ -9,6 +9,9 @@ spring:
     flyway:
       locations: classpath:db/migration
       schemas: PUBLIC
+  h2:
+    console:
+      enabled: true
 
 
 #springdoc:
