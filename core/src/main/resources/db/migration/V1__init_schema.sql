@@ -7,6 +7,7 @@ create table PUBLIC.book
     isbn varchar (50),
     year int,
     created_at timestamp with time zone default current_timestamp,
+    deleted_at timestamp with time zone,
 
     primary key (id)
 );

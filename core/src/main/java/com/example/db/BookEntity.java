@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.OffsetDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,6 +23,9 @@ public class BookEntity {
     private String title;
     private String isbn;
     private Short year;
+
+    private OffsetDateTime created_at;
+    private OffsetDateTime deleted_at;
 
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
