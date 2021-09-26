@@ -1,8 +1,7 @@
 package com.example.service.book;
 
 import com.example.api.Book;
-import com.example.db.BookEntity;
-import com.example.db.BookRepo;
+import com.example.db.book.BookEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

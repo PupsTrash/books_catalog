@@ -1,7 +1,7 @@
 package com.example.service.book;
 
 import com.example.api.Book;
-import com.example.db.BookEntity;
+import com.example.db.book.BookEntity;
 
 public interface BookService {
 
