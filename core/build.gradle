@@ -1,7 +1,10 @@
 dependencies {
+    implementation project(":api")
+    implementation project(":persistence")
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation project(":api")
+
     //Actuator
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 

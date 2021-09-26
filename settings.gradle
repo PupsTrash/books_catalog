@@ -5,5 +5,4 @@ pluginManagement {
 }
 
 rootProject.name = 'books_catalog'
-include 'core'
-include 'api'
+include('core', 'api', 'persistence')
