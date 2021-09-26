@@ -23,8 +23,9 @@ public class BookCrudV1Controller implements BooksV1CrudApi {
 
     @Override
     public BookResponse createBook(BookRequest request) {
-        //TODO: NEED IMPL
-        return null;
+        var dto = mapper.toDto(request);
+        var response = service2.add(dto);
+        return mapper.toResponse(response);
     }
 
 

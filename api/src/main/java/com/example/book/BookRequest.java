@@ -11,7 +11,7 @@ public class BookRequest {
     @Schema(example = "War and Peace")
     private String title;
 
-    @Schema(description = "Author list", example = "[\"Leo Tolstoy\"]")
+    @Schema(description = "Authors id list", example = "[\"1\"]")
     private List<String> authors;
 
     @Schema(example = "2008",
