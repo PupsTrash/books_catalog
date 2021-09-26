@@ -1,5 +1,6 @@
-package com.example.db;
+package com.example.db.book;
 
+import com.example.db.author.AuthorEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,6 +27,11 @@ public class BookEntity {
 
     private OffsetDateTime created_at;
     private OffsetDateTime deleted_at;
+
+    @PrePersist
+    void prePersist() {
+        created_at = OffsetDateTime.now();
+    }
 
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

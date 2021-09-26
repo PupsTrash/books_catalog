@@ -1,4 +1,4 @@
-package com.example.db;
+package com.example.db.author;
 
 import javax.persistence.*;
 

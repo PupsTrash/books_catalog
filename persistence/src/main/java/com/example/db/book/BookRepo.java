@@ -1,4 +1,4 @@
-package com.example.db;
+package com.example.db.book;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -1,14 +1,16 @@
-package com.example.db;
+package com.example.db.author_book;
 
 import javax.persistence.*;
 
+import com.example.db.author.AuthorEntity;
+import com.example.db.book.BookEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity(name = "book_author")
 @Setter
 @Getter
-class AuthorBookEntity {
+public class AuthorBookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOOK_AUTHOR_GEN")
     @SequenceGenerator(name = "BOOK_AUTHOR_GEN", sequenceName = "book_author_seq", allocationSize = 1)
