@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.controller.book;
 
 import com.example.book.*;
 import com.example.common.PageableResponse;
