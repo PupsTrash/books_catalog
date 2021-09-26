@@ -30,7 +30,7 @@ public class AddBookDto {
     static class Author {
 
         @NotNull
-        @Min(2)
-        String name;
+        @Min(1)
+        String id;
     }
 }
